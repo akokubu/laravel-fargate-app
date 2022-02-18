@@ -78,7 +78,7 @@ jobs:
       - name: Push php image to ecr
         env:
           DOCKER_BUILDKIT: 1
-          ECR_REGISTRY: ${{ steps.amazon-ecr-login.output.registry }}
+          ECR_REGISTRY: ${{ steps.amazon-ecr-login.outputs.registry }}
           ECR_REPOSITORY: ${{ env.SYSTEM_NAME }}-${{ env.ENV_NAME }}-${{ env.SERVICE_NAME }}-php
         run: |
           docker build \
