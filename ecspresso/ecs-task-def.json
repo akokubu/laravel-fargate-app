@@ -11,6 +11,14 @@
       "environment": [],
       "essential": true,
       "image": "118626858071.dkr.ecr.ap-northeast-1.amazonaws.com/example-prod-foobar-nginx:latest",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/example-prod-foobar/nginx",
+          "awslogs-region": "ap-northeast-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
       "mountPoints": [
         {
           "containerPath": "/var/run/php-fpm",
@@ -33,6 +41,14 @@
       "environment": [],
       "essential": true,
       "image": "118626858071.dkr.ecr.ap-northeast-1.amazonaws.com/example-prod-foobar-php:latest",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/example-prod-foobar/php",
+          "awslogs-region": "ap-northeast-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
       "mountPoints": [
         {
           "containerPath": "/var/run/php-fpm",
