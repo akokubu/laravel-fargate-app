@@ -90,7 +90,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Upload env file
-        run: aws s3 cp .env.$ENV_NAME s3://lp-laravel-fargate-app-${local.name_prefix}-${local.service_name}-env-file/$IMAGE_TAG/.env
+        run: aws s3 cp .env.$ENV_NAME s3://lp-laravel-fargate-app-$SYSTEM_NAME-$ENV_NAME-$SERVICE_NAME-env-file/$IMAGE_TAG/.env
         working-directory: backend
 
       - name: Download ecspresso
