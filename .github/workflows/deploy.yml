@@ -110,7 +110,6 @@ jobs:
             --latest-task-definition \
             --watch-container=php \
             --overrides='{"containerOverrides":[{"name":"nginx", "command":["nginx", "-v"]},{"name":"php", "command":["php", "artisan", "migrate", "--force"]}]}'
-
         working-directory: ./ecspresso
 
       - name: Deploy to ecs
