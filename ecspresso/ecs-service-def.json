@@ -22,7 +22,7 @@
     {
       "containerName": "nginx",
       "containerPort": 80,
-      "targetGroupArn": "{{ tfstate `data.aws_lb_target_group.this.arn` }}"
+      "targetGroupArn": "arn:aws:elasticloadbalancing:ap-northeast-1:118626858071:targetgroup/example-prod-foobar/0f81dc4844a35fab"
     }
   ],
   "networkConfiguration": {
